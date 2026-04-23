@@ -1,0 +1,14 @@
+datasets
+huggingface_hub
+matplotlib
+google-generativeai
+transformers
+tqdm
+python-dotenv
+gradio
+torch
+accelerate
+peft
+bitsandbytes
+scipy
+scikit-learn
