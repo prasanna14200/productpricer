@@ -13,7 +13,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from src.items import Item
 
 
-def load_model(model_path: str = "models/fine_tuned"):
+def load_model(model_path: str = "models/gpt2-pricer"):
     """Load the fine-tuned model and tokenizer.
 
     Args:
@@ -73,7 +73,7 @@ def extract_price_from_text(text: str) -> Optional[float]:
     return None
 
 
-def predict_price(description: str, model_path: str = "models/fine_tuned") -> str:
+def predict_price(description: str, model_path: str = "models/gpt2-pricer") -> str:
     """Predict price for a product description.
 
     Args:
@@ -128,7 +128,7 @@ def main():
     parser = argparse.ArgumentParser(description="Predict product price from description")
     parser.add_argument("--description", required=True,
                        help="Product description for price prediction")
-    parser.add_argument("--model-path", default="models/fine_tuned",
+    parser.add_argument("--model-path", default="models/gpt2-pricer",
                        help="Path to the fine-tuned model")
 
     args = parser.parse_args()

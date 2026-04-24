@@ -13,10 +13,12 @@
    - `src/app.py`
    - `src/inference.py`
    - `src/items.py`
-   - `models/gpt2-pricer/` (entire directory)
    - `requirements.txt`
+   - Optional: `models/gpt2-pricer/` if you have a fine-tuned model
 3. Set the main file to `src/app.py`
 4. Deploy!
+
+> Note: If no local fine-tuned model is present, the app will fall back to the base `gpt2` model and still start successfully.
 
 ## Docker Deployment
 

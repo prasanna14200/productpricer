@@ -64,7 +64,7 @@ def tokenize_function(examples, tokenizer):
     )
 
 
-def train_model(train_file: str, val_file: str, output_dir: str = "models/fine_tuned"):
+def train_model(train_file: str, val_file: str, output_dir: str = "models/gpt2-pricer"):
     """Train the GPT-2 model on price prediction data.
 
     Args:
@@ -144,7 +144,7 @@ def main():
                        help="Path to training data JSONL file")
     parser.add_argument("--val-file", default="data/processed/fine_tune_validation.jsonl",
                        help="Path to validation data JSONL file")
-    parser.add_argument("--output-dir", default="models/fine_tuned",
+    parser.add_argument("--output-dir", default="models/gpt2-pricer",
                        help="Output directory for trained model")
 
     args = parser.parse_args()
